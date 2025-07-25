@@ -13,7 +13,7 @@ A playful, child-friendly AI chat application designed for kids aged 6-12 with p
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-netlify-url.netlify.app) *(Update after deployment)*
+[View Live Demo](https://your-netlify-url.netlify.app) *(Deploying now...)*
 
 ## 🛠 Tech Stack
 
