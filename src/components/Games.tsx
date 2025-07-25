@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Gamepad2, Play, Trophy, Star, ArrowLeft, Check, X } from 'lucide-react';
+import { Play, Trophy, ArrowLeft, Check, X } from 'lucide-react';
 
 interface KidProfile {
   nickname: string;

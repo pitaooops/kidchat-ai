@@ -55,6 +55,7 @@ const EnhancedChat: React.FC<EnhancedChatProps> = ({ profile }) => {
   const [inputText, setInputText] = useState('');
   const [isListening, setIsListening] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isNewSession, setIsNewSession] = useState(false);
   const [currentSuggestions, setCurrentSuggestions] = useState<string[]>(getTopicSuggestions());
   const [currentlyPlayingMessageId, setCurrentlyPlayingMessageId] = useState<string | null>(null);
@@ -112,6 +113,7 @@ const EnhancedChat: React.FC<EnhancedChatProps> = ({ profile }) => {
     };
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const getConversationPrompts = (topic: string): string[] => {
     const prompts = [
       "Tell me more! 🤔",

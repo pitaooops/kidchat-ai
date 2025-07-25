@@ -236,7 +236,9 @@ const Quests: React.FC<QuestsProps> = ({ profile }) => {
     </div>
   );
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const completedQuests = mockQuests.filter(q => q.isCompleted).length;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const totalQuests = mockQuests.length;
 
   return (

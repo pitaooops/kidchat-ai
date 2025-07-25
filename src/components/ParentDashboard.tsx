@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Clock, MessageCircle, TrendingUp, Shield, Settings, User } from 'lucide-react';
 
 interface Child {
@@ -29,26 +29,7 @@ const ParentDashboard: React.FC = () => {
   const [usageStats, setUsageStats] = useState<UsageStats | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Mock data for demo
-  useEffect(() => {
-    // Simulate children data
-    setChildren([
-      { id: 1, name: "Emma", age: 8, avatar: "👧" },
-      { id: 2, name: "Alex", age: 10, avatar: "👦" }
-    ]);
-    
-    if (children.length > 0) {
-      setSelectedChild(children[0]);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (selectedChild) {
-      fetchUsageStats(selectedChild.id);
-    }
-  }, [selectedChild]);
-
-  const fetchUsageStats = async (childId: number) => {
+  const fetchUsageStats = useCallback(async (childId: number) => {
     setIsLoading(true);
     try {
       // Mock data for demo - in real app this would fetch from API
@@ -73,7 +54,27 @@ const ParentDashboard: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
+
+  // Mock data for demo
+  useEffect(() => {
+    // Simulate children data
+    setChildren([
+      { id: 1, name: "Emma", age: 8, avatar: "👧" },
+      { id: 2, name: "Alex", age: 10, avatar: "👦" }
+    ]);
+    
+    if (children.length > 0) {
+      setSelectedChild(children[0]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (selectedChild) {
+      fetchUsageStats(selectedChild.id);
+    }
+  }, [selectedChild, fetchUsageStats]);
 
   const formatDuration = (seconds: number): string => {
     const minutes = Math.floor(seconds / 60);

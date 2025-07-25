@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, Palette, Target, Gamepad2, Menu, X } from 'lucide-react';
+import { MessageCircle, Palette, Target, Gamepad2, Menu } from 'lucide-react';
 import EnhancedChat from './EnhancedChat';
 import Creatives from './Creatives';
 import Quests from './Quests';
