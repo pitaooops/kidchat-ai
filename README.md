@@ -13,7 +13,7 @@ A playful, child-friendly AI chat application designed for kids aged 6-12 with p
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-netlify-url.netlify.app) *(Deploying now...)*
+[🚀 **VIEW LIVE DEMO**](https://boisterous-eclair-271769.netlify.app/)
 
 ## 🛠 Tech Stack
 
